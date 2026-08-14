@@ -1,4 +1,10 @@
 
+
+from flask import Flask, request, jsonify
+import joblib
+import numpy as np
+import pandas as pd
+
 # Initialize Flask app
 app = Flask("SuperKart Regression Model API")
 
@@ -36,3 +42,4 @@ def predict_batch():
 # Run the Flask app
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
