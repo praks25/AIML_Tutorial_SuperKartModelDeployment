@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 
 # Backend URL (Docker Compose will replace this with the backend service name)
-BACKEND_URL = "http://localhost:5000"
+BACKEND_URL = "http://backend:5000"
 
 st.set_page_config(page_title="SuperKart Price Predictor", layout="wide")
 
