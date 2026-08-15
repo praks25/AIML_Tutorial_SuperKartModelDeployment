@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend_files
+    container_name: superkart_backend
+    ports:
+      - "5000:5000"
+    networks:
+      - superkart_network
+
+  frontend:
+    build: ./frontend_files
+    container_name: superkart_frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    networks:
+      - superkart_network
+
+networks:
+  superkart_network:
+    driver: bridge
+
