@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   backend:
-    build: ./backend_files
+    build: ./backend
     container_name: superkart_backend
     ports:
       - "5000:5000"
@@ -10,7 +10,7 @@ services:
       - superkart_network
 
   frontend:
-    build: ./frontend_files
+    build: ./frontend
     container_name: superkart_frontend
     ports:
       - "8501:8501"
